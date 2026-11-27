@@ -1,0 +1,10 @@
+config.env
+*.env
+!*.env.example
+
+*.key
+*.pem
+*.pub
+
+*.log
+*.tmp
