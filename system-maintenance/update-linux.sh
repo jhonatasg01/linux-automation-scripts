@@ -30,7 +30,7 @@ if command -v flatpak &> /dev/null; then
 fi
 
 echo -e "\n>>> [4/4] Limpando logs antigos e cache de miniaturas..."
-#Logs de até 7 dias
+#Logs acima de 7 dias
 sudo journalctl --vacuum-time=7d
 #Cache de miniaturas
 rm -rf ~/.cache/thumbnails/*
