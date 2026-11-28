@@ -24,7 +24,7 @@ linux-automation-scripts/
 Clone o repositório para a sua máquina local e acesse o diretório do projeto:
 
 ```bash
-git clone https://github.com
+git clone https://github.com/jhonatasg01/linux-automation-scripts
 cd linux-automation-scripts
 ```
 
