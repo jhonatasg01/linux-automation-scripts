@@ -75,6 +75,6 @@ echo -e "\n>>> Iniciando transferência com rsync..."
 # -s: envia caracteres nos nomes dos arquivos ou caminhos de forma segura
 # --partial: mantém arquivos incompletos se a rede cair
 # --progress: mostra barra de progresso e velocidade
-sudo rsync -avhs --partial --progress -e "ssh -i \"$CHAVE_SSH\"" "${origens[@]}" "$PATH_LOCAL"
+rsync -avhs --partial --progress -e "ssh -i \"$CHAVE_SSH\"" "${origens[@]}" "$PATH_LOCAL"
 
 echo -e "\n>>> Backup concluído com sucesso!"
