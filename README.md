@@ -19,6 +19,17 @@ linux-automation-scripts/
 
 ---
 
+## Instalação
+
+Clone o repositório para a sua máquina local e acesse o diretório do projeto:
+
+```bash
+git clone https://github.com
+cd linux-automation-scripts
+```
+
+---
+
 ## Scripts Disponíveis
 
 ### 1. Backup Remoto de VPS (`backup-vps/backup-vps.sh`)
@@ -36,7 +47,11 @@ Automação para transferir arquivos grandes ou múltiplos diretórios de um ser
    cp config.env.example config.env
    ```
 2. *(Opcional)* Edite o arquivo `config.env` com os dados do seu servidor. Campos deixados em branco serão solicitados no terminal.
-3. Dê permissão de execução e inicie o script:
+3. Certifique-se de que sua chave SSH pertence ao seu usuário e possui a permissão correta:
+   ```bash
+   chmod 600 /caminho/da/sua/chave.key
+   ```
+4. Dê permissão de execução e inicie o script:
    ```bash
    chmod +x backup-vps.sh
    ./backup-vps.sh
@@ -67,6 +82,7 @@ chmod +x update-linux.sh
 *   Sistema operacional Linux (testado no **Linux Mint** e **Ubuntu**).
 *   Pacotes necessários: `bash`, `rsync`, `openssh-client` e `flatpak` *(opcional)*.
 *   Privilégios `sudo` para tarefas de atualização e limpeza de sistema.
+* Chave SSH privada configurada com permissão `600` e pertencente ao usuário atual.
 
 ---
 
